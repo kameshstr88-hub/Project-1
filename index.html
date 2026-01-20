@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Devil Demon Signup</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #2b1a3d, #000);
+        color: #fff;
+    }
+
+    .card {
+        width: 320px;
+        padding: 25px;
+        background: rgba(0,0,0,0.85);
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255, 60, 90, 0.7);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff3355;
+        letter-spacing: 2px;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        margin-top: 10px;
+        padding: 9px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background: #111;
+        color: #fff;
+    }
+
+    input:focus {
+        border: 1px solid #ff3355;
+    }
+
+    .msg {
+        font-size: 12px;
+        color: #ff6b6b;
+        margin-top: 3px;
+        height: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background:#ff3355;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background: #555;
+        cursor: not-allowed;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>DEVIL DEMON</h2>
+
+    <form id="form">
+        <label>DD Name</label>
+        <input type="text" id="name">
+        <div class="msg" id="nameMsg"></div>
+
+        <label>Email</label>
+        <input type="email" id="email">
+        <div class="msg" id="emailMsg"></div>
+
+        <label>Secret Code</label>
+        <input type="password" id="password">
+        <div class="msg" id="passMsg"></div>
+
+        <button id="btn" disabled>Join Team</button>
+    </form>
+</div>
+
+<script>
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const passInput = document.getElementById("password");
+    const btn = document.getElementById("btn");
+
+    const nameMsg = document.getElementById("nameMsg");
+    const emailMsg = document.getElementById("emailMsg");
+    const passMsg = document.getElementById("passMsg");
+
+    function validateForm() {
+        let valid = true;
+
+        if (nameInput.value.trim().length < 3) {
+            nameMsg.textContent = "Minimum 3 characters";
+            valid = false;
+        } else nameMsg.textContent = "";
+
+        if (!emailInput.value.includes("@")) {
+            emailMsg.textContent = "Enter valid email";
+            valid = false;
+        } else emailMsg.textContent = "";
+
+        if (passInput.value.length < 6) {
+            passMsg.textContent = "At least 6 characters";
+            valid = false;
+        } else passMsg.textContent = "";
+
+        btn.disabled = !valid;
+    }
+
+    nameInput.addEventListener("input", validateForm);
+    emailInput.addEventListener("input", validateForm);
+    passInput.addEventListener("input", validateForm);
+
+    document.getElementById("form").addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Welcome to the Devil Demon Team 🔥");
+    });
+</script>
+
+</body>
+</html>
