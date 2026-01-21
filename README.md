@@ -17,6 +17,11 @@ The purpose of this project is to demonstrate:
 
 ---
 
+## How to view
+You can view with this link [https://kameshstr88-hub.github.io/Project-1/]
+
+---
+
 ## Functional Description
 
 The form consists of three input fields: name, email, and password.  
@@ -46,4 +51,3 @@ No third-party libraries or frameworks are used.
 
 ---
 
-## File Structure
