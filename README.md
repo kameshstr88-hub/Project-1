@@ -1,45 +1,49 @@
 # Project-1
 
-# Signup Form with Client-Side Validation
+# Client-Side Signup Form Validation
 
-A responsive signup form built using **HTML, CSS, and JavaScript**, featuring real-time client-side validation and a clean user interface.  
-This project demonstrates fundamental frontend development concepts and best practices.
-
----
-
-## Overview
-
-This project implements a signup form that validates user input dynamically as the user types.  
-The submit button remains disabled until all form fields meet the validation criteria, ensuring better user experience and data integrity.
+This repository contains a simple signup form implemented using HTML, CSS, and JavaScript.  
+The application performs client-side validation in real time and prevents form submission until all inputs meet defined validation rules.
 
 ---
 
-## Features
+## Purpose
 
-- Real-time input validation
-- Disabled submit button until form is valid
-- Clear and user-friendly validation messages
-- Responsive centered layout
-- Clean and readable code structure
-- No external libraries or frameworks
-
----
-
-## Validation Rules
-
-- **Name**: Minimum of 3 characters
-- **Email**: Must contain a valid email format (`@`)
-- **Password**: Minimum of 6 characters
-- **Submit Button**: Enabled only when all fields are valid
+The purpose of this project is to demonstrate:
+- Basic frontend form handling
+- Real-time validation using JavaScript
+- DOM manipulation without external libraries
+- Clean and maintainable UI logic
 
 ---
 
-## Technologies Used
+## Functional Description
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+The form consists of three input fields: name, email, and password.  
+Validation logic is executed on every input event.  
+If any field is invalid, an inline error message is displayed and the submit button remains disabled.
+
+On successful validation, the form can be submitted and a confirmation message is shown.
 
 ---
 
-## Project Structure
+## Validation Criteria
+
+- **Name**: Must contain at least 3 non-whitespace characters
+- **Email**: Must include the `@` symbol
+- **Password**: Must contain at least 6 characters
+- **Submission**: Disabled unless all conditions are satisfied
+
+---
+
+## Technology Stack
+
+- HTML5 for structure
+- CSS3 for layout and styling
+- JavaScript (ES6) for validation logic and event handling
+
+No third-party libraries or frameworks are used.
+
+---
+
+## File Structure
